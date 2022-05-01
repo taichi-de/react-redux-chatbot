@@ -1,5 +1,5 @@
 const defaultDataset = {
-    "init": {
+    "init": { // initDataset
         answers: [
             {content: "仕事を依頼したい", nextId: "job_offer"},
             {content: "エンジニアのキャリアについて相談したい", nextId: "consultant"},
