@@ -1,6 +1,5 @@
-// import React from 'react';
 import React from 'react';
-import List from '@mui/material/List';
+import List from '@material-ui/core/List';
 import {Chat} from './index'
 import {createStyles, makeStyles} from "@material-ui/core/styles";
 
@@ -11,8 +10,8 @@ const useStyles = makeStyles(() =>
             padding: "0",
             overflow: "auto"
         }
-    })
-)
+    }),
+);
 
 const Chats = (props) => {
     const classes = useStyles();
@@ -23,7 +22,7 @@ const Chats = (props) => {
                 return <Chat text={chat.text} type={chat.type} key={index} />
             })}
         </List>
-      );
-}
+    );
+};
 
-export default Chats
+export default Chats;

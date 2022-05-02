@@ -1,17 +1,17 @@
 import React from 'react';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import NoProfile from '../assets/img/no-profile.png'
-import TaiProfile from '../assets/img/Bild.png'
+import ListItem from "@material-ui/core/ListItem";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import Avatar from "@material-ui/core/Avatar";
+import TaiProfile from "../assets/img/TaiProfile.png";
+import NoProfile from "../assets/img/no-profile.png";
 
 const Chat = (props) => {
-    const isQuestion = (props.type === 'question')
-    const classes = isQuestion ? 'p-chat__row' : 'p-chat__reverse'
+    const isQuestion = (props.type === 'question');
+    const classes = isQuestion ? "p-chat__row" : "p-chat__reverse";
 
     return (
-        <ListItem>
-            <ListItemAvatar className={classes}>
+        <ListItem className={classes}>
+            <ListItemAvatar>
                 {isQuestion ? (
                     <Avatar alt="icon" src={TaiProfile} />
                 ) : (
@@ -20,7 +20,7 @@ const Chat = (props) => {
             </ListItemAvatar>
             <div className="p-chat__bubble">{props.text}</div>
         </ListItem>
-    )
-}
+    );
+};
 
-export default Chat
+export default Chat;
