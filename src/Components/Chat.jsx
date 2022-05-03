@@ -1,7 +1,6 @@
 import React from 'react';
-import ListItem from "@material-ui/core/ListItem";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import Avatar from "@material-ui/core/Avatar";
+import { ListItem, ListItemAvatar } from '@mui/material';
+import Avatar from '@mui/material/Avatar';
 import TaiProfile from "../assets/img/TaiProfile.png";
 import NoProfile from "../assets/img/no-profile.png";
 

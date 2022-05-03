@@ -1,31 +1,29 @@
-import React from 'react';
-import { makeStyles, createStyles} from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 
-const useStyles = makeStyles(() =>
-    createStyles({
-        "button": {
-            borderColor: "#FFB549",
-            color: "#FFB549",
-            fontWeight: 600,
-            marginBottom: "8px",
-            "&:hover": {
-                backgroundColor: "#FFB549",
-                color: "#fff"
-            }
-        }
-    }),
-);
+const CustomizedButton = styled(Button)`
+    border-color: #FFB549;
+    color: #FFB549;
+    font-weight: 600;
+    margin-bottom: 8px;
+
+    :hover {
+        background-color: #FFB549;
+        color: #fff;
+    }
+`;
 
 const Answer = (props) => {
-    const classes = useStyles();
 
     return (
-        <Button className={classes.button} variant="outlined"
-                onClick={() => props.select(props.answer.content, props.answer.nextId)}>
+        <CustomizedButton
+            variant="outlined"
+            onClick={() => props.select(props.answer.content, props.answer.nextId)}
+        >
             {props.answer.content}
-        </Button>
+        </CustomizedButton>
     );
-}
+};
 
 export default Answer;

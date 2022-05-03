@@ -63,8 +63,8 @@ const App = () => {
       default:
         // 現在のチャット一覧を取得
         addChats({
-            text: selectedAnswer,
-            type: 'answer'
+          text: selectedAnswer,
+          type: 'answer'
         })
 
         setTimeout(() => displayNextQuestion(nextQuestionId, dataset[nextQuestionId]), 750)
@@ -80,7 +80,7 @@ const App = () => {
         // Fetch questions dataset from Firestore
         await db.collection('questions').get().then(snapshots => {
           snapshots.forEach(doc => {
-              initDataset[doc.id] = doc.data()
+            initDataset[doc.id] = doc.data()
           })
         });
 
